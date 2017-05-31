@@ -2,7 +2,7 @@
 
 ## An experiment in pre-hashing the users password in the client.
 
-TL,DR; [Try the Demo](https://f1lt3r.github.com/client-password-prehash)
+TL,DR; [Try the Demo](https://f1lt3r.github.com/client-password-prehash/index.html)
 
 This is an experiment that aims to make passwords harder for hackers to crack.
 
