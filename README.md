@@ -48,6 +48,4 @@ My second question is: would this make things too hard for the user (remembering
 
 Perhaps allowing users to value simplicity above security is a flawed paradigm.
 
-Whatever the case: because the hashes in transit are both domain and user specific, I would think that finding solutions to hashes with platforms like MD5-Online or MD5 Decrypt would become much harder, especially where multiple services used similar (and slightly different) techniques.
-
-- Alistair
+Whatever the case: because the hashes in transit are both domain and user specific, I would think that finding solutions to hashes with platforms like [MD5-Online](http://md5online.org/md5-decrypt.html) or [MD5 Decrypt](http://md5decrypt.net/en/Sha512/) would become much harder, especially where multiple services used similar (and slightly different) techniques.
