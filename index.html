@@ -7,8 +7,68 @@
   <meta charset="UTF-8">
 </head>
 
+
 <body>
+	<a href="https://github.com/f1lt3r/client-password-prehash"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+
   <h1>Client Password Pre-Hashing Experiment</h1>
+
+  <h2>Demonstration</h2>
+
+  <div class="demo">
+  <section>
+
+    <h3>Step 1 - Password</h3>
+
+    <div class="col left">
+      <p>Begin by creating a password. Your password must be
+      a combination of the types of required characters
+      on the right.</p>
+
+      <label for="password"><b>Password: </b>
+        <input type="password" id="password_box" />
+      </label>
+
+	    <div id="pwinfo"></div>
+    </div>
+
+    <div class="col right">
+      <ul>
+        <li class="requirement" id="lowercase">Lowercase (a-z)</li>
+        <li class="requirement" id="capitals">Capitals (A-Z)</li>
+        <li class="requirement" id="numbers">Numbers (0-9)</li>
+        <li class="requirement" id="special">Special characters (!@#$%...etc)</li>
+        <li class="requirement" id="pwlength">Length - 12 characters or longer</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h3>Step 2 - Keys</h3>
+
+    <p>Choose three or more keys from the images below. <i>Make it memorable!</i> You will need to remember both: a) the images you choose, and <strong class="red">b) the order in which you chose them!</strong></p>
+
+    <p><sup><b>WARNING: Only choose as many keys as you can remember.</b> If you loose your keys, your password will no longer work! Do not pick a sequence as the order of the images is randomized.</sup></p>
+
+    <div class="col l4x1">
+      <ul id="keys"></ul>
+      <div id="keycount"></div>
+    </div>
+
+    <div class="col l4x3">
+      <div id="visual_key_container" class="key-set"></div>
+    </div>
+  </section>
+
+  <section>
+    <h3>Step 3 - Output!</h3>
+
+    <div id="output-hash"></div>
+  </section>
+  </div>
+
+
+  <h2>About</h2>
 
   <p class="disclaimer">
   	<b>Disclaimer:</b>
@@ -88,7 +148,7 @@
 	  trivial feat for an attacker, I am not qualified to
 	  understand.</p>
 
-	  <h2>Shortcomings of This Method</h2>
+	  <h3>Shortcomings of This Method</h3>
 
 	  <p>My hope that was that because the salt would be
 	  domain-specific, and randomized by the user, that the
@@ -124,58 +184,6 @@
 	  <p>- Alistair</p>
   </div>
 
-
-  <h1>Demonstration</h1>
-
-  <section>
-
-    <h2>Step 1 - Password</h2>
-
-    <div class="col left">
-      <p>Begin by creating a password. Your password must be
-      a combination of the types of required characters
-      on the right.</p>
-
-      <label for="password"><b>Password: </b>
-        <input type="password" id="password_box" />
-      </label>
-
-	    <div id="pwinfo"></div>
-    </div>
-
-    <div class="col right">
-      <ul>
-        <li class="requirement" id="lowercase">Lowercase (a-z)</li>
-        <li class="requirement" id="capitals">Capitals (A-Z)</li>
-        <li class="requirement" id="numbers">Numbers (0-9)</li>
-        <li class="requirement" id="special">Special characters (!@#$%...etc)</li>
-        <li class="requirement" id="pwlength">Length - 12 characters or longer</li>
-      </ul>
-    </div>
-  </section>
-
-  <section>
-    <h2>Step 2 - Keys</h2>
-
-    <p>Choose three or more keys from the images below. <i>Make it memorable!</i> You will need to remember both: a) the images you choose, and <strong class="red">b) the order in which you chose them!</strong></p>
-
-    <p><sup><b>WARNING: Only choose as many keys as you can remember.</b> If you loose your keys, your password will no longer work! Do not pick a sequence as the order of the images is randomized.</sup></p>
-
-    <div class="col l4x1">
-      <ul id="keys"></ul>
-      <div id="keycount"></div>
-    </div>
-
-    <div class="col l4x3">
-      <div id="visual_key_container" class="key-set"></div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Step 3 - Output!</h2>
-
-    <div id="output-hash"></div>
-  </section>
 
   <script src="client-password-prehash.js"></script>
 </body>
